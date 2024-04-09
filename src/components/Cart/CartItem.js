@@ -3,9 +3,10 @@ import classes from './CartItem.module.css';
 import { cartActions } from '../../store/cartSlice';
 
 const CartItem = (props) => {
-  const { title, quantity, total, price, id } = props.item;
 
   const dispatch = useDispatch();
+
+  const { title, quantity, total, price, id } = props.item;
 
   const addItemHandler = ()  => {
     dispatch(cartActions.addItem(
